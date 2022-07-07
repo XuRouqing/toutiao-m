@@ -5,10 +5,20 @@ import store from './store'
 import 'amfe-flexible'
 // 加载全局样式
 import './style/index.less'
-import { Button } from 'vant'
+import { Button, NavBar, Toast, Form, Field, CellGroup, CountDown, Tabbar, TabbarItem  } from 'vant'
+
+Vue.use(Button)
+Vue.use(NavBar)
+Vue.use(Toast)
+Vue.use(Form)
+Vue.use(Field)
+Vue.use(CellGroup)
+Vue.use(CountDown)
+Vue.use(Tabbar)
+Vue.use(TabbarItem)
 
 Vue.config.productionTip = false
-Vue.use(Button)
+
 new Vue({
   router,
   store,

@@ -1,1 +1,7 @@
 @import "download/font_3500773_r7e74qanlyp/iconfont.css";
+.van-nav-bar {
+  background-color: #1989fa;
+}
+.van-nav-bar__title {
+  color: #fff;
+}
