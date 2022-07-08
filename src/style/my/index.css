@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .login-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .login-btn img {
+  width: 132px;
+  height: 132px;
+}
+.header .login-btn p {
+  height: 28px;
+  font-family: MicrosoftYaHei;
+  font-size: 28px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.header-login {
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+}
+.header-login .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 231px;
+}
+.header-login .top .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-login .top .left #userImage {
+  width: 132px;
+  height: 132px;
+  border: solid #fff 2px;
+}
+.header-login .top .left #userName {
+  padding: 22px;
+  font-family: MicrosoftYaHei;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.header-login .top .right .edit-btn {
+  width: 116px;
+  height: 33px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  line-height: 20px;
+}
+.header-login .top .right .edit-text {
+  width: 82px;
+  height: 20px;
+  font-family: MicrosoftYaHei;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #666666;
+}
+.header-login .bottom {
+  height: 135px;
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
+}
+.header-login .bottom .data-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-login .bottom .data-item .count,
+.header-login .bottom .data-item .text {
+  font-family: ArialMT;
+  font-size: 36px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.header-login .bottom .data-item .text {
+  padding: 5px;
+  font-size: 23px;
+}
+.gride i {
+  font-size: 45px;
+}
+.gride .collection {
+  color: #eb5253;
+}
+.gride .histroy {
+  color: #ff9d1d;
+}
+.mes {
+  margin-top: 10px;
+}
+.mes .logout {
+  margin-top: 10px;
+  height: 104px;
+  font-family: MicrosoftYaHei;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #d86262;
+}
+.mes .logout .van-cell__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

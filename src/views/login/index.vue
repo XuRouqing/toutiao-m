@@ -2,9 +2,13 @@
   <div class="login">
     <van-nav-bar
       title="注册/登录"
-      @click-left="onClickLeft"
-    />
-
+      @click-left="$router.back()"
+    >
+      <i 
+        slot="left" 
+        class="iconfont icon-guanbi"
+      ></i>
+    </van-nav-bar>
     <van-form ref="loginForm" @submit="onSubmit">
       <van-cell-group inset>
           <van-field
@@ -65,7 +69,7 @@
 </template>
 
 <script>
-import { login, getCode } from '@/api/user'
+import { login, getCode } from '@/api/user/user.js'
 
 export default {
   data(){
@@ -94,9 +98,6 @@ export default {
     }
   },
    methods: {
-    onClickLeft() {
-      this.$toast('返回');
-    },
     async onSubmit() {
         this.$toast.loading({
           message: '登录中...',
@@ -112,7 +113,7 @@ export default {
         localStorage.setItem('token', res.data.data.token)
         this.$store.commit('setUser', res.data.data)
         this.$toast.success('登录成功')
-        console.log(res)
+        this.$router.back()
       } catch (error) {
         if(error.response.status === 400 ){
           this.user.mobile = ''
@@ -156,5 +157,8 @@ export default {
 .tip p{
   font-size: 12px;
   color: grey;
+}
+.icon-guanbi{
+  color: #fff;
 }
 </style>

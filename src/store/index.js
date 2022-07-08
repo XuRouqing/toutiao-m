@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const TOKEN_KEY = 'TOUTIAO_USER'
-import { gteItem, setItem } from '@/utils/storage'
+import { gteItem, setItem, removeItem } from '@/utils/storage'
 import { getItem } from '../utils/storage'
 
 export default new Vuex.Store({
@@ -18,6 +18,10 @@ export default new Vuex.Store({
 
       setItem(TOKEN_KEY, state.user)
       // window.localStorage.setItem(TOKEN_KEY, JSON.stringify(state.user))
+    },
+    logout(state) {
+      state.user = null
+      removeItem(TOKEN_KEY)
     }
   },
   actions: {

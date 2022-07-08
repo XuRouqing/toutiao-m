@@ -1,32 +1,46 @@
 <template>
     <div class="layout_container">
-        <van-tabbar v-model="active">
-            <van-tabbar-item>
-                <i slot="icon" class="iconfont icon-shouye"></i>
-                <span>首页</span>
+        <router-view />
+        <van-tabbar route>
+            <van-tabbar-item name="home" to="/">
+                <i slot="icon" class="iconfont icon-shouye layout-icon"></i>
+                <span class="layout-title">首页</span>
             </van-tabbar-item>
-            <van-tabbar-item>
-                <span>问答</span>
-                <i slot="icon" class="iconfont icon-wenda"></i>
+            <van-tabbar-item name="question" to="/question">
+                <span class="layout-title">问答</span>
+                <i slot="icon" class="iconfont icon-wenda layout-icon"></i>
             </van-tabbar-item>
-            <van-tabbar-item>
-                <span>视频</span>
-                <i slot="icon" class="iconfont icon-shipin"></i>
+            <van-tabbar-item name="vedio" to="/vedio">
+                <span class="layout-title">视频</span>
+                <i slot="icon" class="iconfont icon-shipin layout-icon"></i>
             </van-tabbar-item>
-            <van-tabbar-item>
-                <span>我的</span>
-                <i slot="icon" class="iconfont icon-wode"></i>
+            <van-tabbar-item name="my" to="/my">
+                <span v-if="user" class="layout-title">我的</span>
+                <span v-else class="layout-title">未登录</span>
+                <i slot="icon" class="iconfont icon-wode layout-icon"></i>
             </van-tabbar-item>
         </van-tabbar>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-    name: 'layoutIndex'
+    name: 'layoutIndex',
+    data() {
+        return {
+            
+        }
+    },
+    computed: {
+        ...mapState(['user'])
+    }
 }
 </script>  
 
-<style>
-
+<style scoped>
+.van-tabbar-item .layout-title, 
+.van-tabbar-item .layout-icon{
+    font-size: 30px;
+}
 </style>
